@@ -8,6 +8,7 @@ const authRoutes = require('./Routes/authRoutes');
 const userRoutes=require('./Routes/userroutes');
 const connect = require("./db/models/config");
 
+
 dotenv.config();
 
 // Connect to the database
@@ -31,7 +32,7 @@ app.use(userRoutes);
 
 // Serve static files
 console.log("__dirname", __dirname);
-app.use('/', express.static(__dirname + "/hrmclient"));
+app.use('/', express.static(__dirname + "/public"));
 
 // Start the server
 app.listen(process.env.PORT, () => {
