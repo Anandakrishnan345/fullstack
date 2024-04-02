@@ -1,0 +1,76 @@
+/* Main container styles */
+.user-details-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    margin: 0 auto; /* Center align */
+    width: 80%; /* Adjust width as needed */
+    text-align: center; /* Center align text content */
+    
+}
+
+/* User info styles */
+.user-info {
+    display: flex; /* Ensure contents are centered */
+    text-align: left; /* Align contents to the left within the centered container */
+    
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.user-info-name{
+color: rgb(0, 136, 255);
+font-size: large;
+}
+.user-info-email{
+    color: rgb(0, 136, 255);
+}
+.user-info-navbar {
+    background-color: rgba(217, 234, 243, 0.8);  /* Navbar background color */
+    color: #fff; /* Text color */
+    padding: 10px; /* Padding for the navbar */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Align items with space between them */
+    animation: slideIn 0.59s ease forwards;
+}
+/* Button styles */
+.button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Add margin between buttons */
+    margin-right: 10px;
+}
+
+/* Hover effect */
+.button:hover {
+    background-color: darkblue;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+    .button {
+        padding: 8px 16px;
+    }
+}
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .user-info-navbar {
+    animation: slideIn 0.59s ease forwards;
+  }
+  

@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(165, 42, 42, 0.503);
+
+}
+.ctn1,.ctn2,h4,ul,li{
+    text-align: center;
+    color: white;
+    /* border: 2px solid black; */
+   
+}
+.innerctn,li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px soid greenyellow; */
+    
+   
+}
+.ctn2{
+    display: flex;
+    flex-direction: column;
+}
+.ctn2,ul,li{
+    align-items: center;
+}

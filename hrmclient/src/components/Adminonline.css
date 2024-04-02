@@ -1,0 +1,35 @@
+.admin-button{
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Blue button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); 
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.admin-details{
+    background-color: rgba(149, 220, 255, 0.8); /* Semi-transparent white background */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    /* margin: auto; */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); 
+    display: flex;
+   margin-top: 5px;
+}
+
+.admin-image{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+    border-radius: 50%;
+}
+.ctn{
+   
+    /* padding: 40px; */
+    min-height: 97vh;
+    border: none;
+}

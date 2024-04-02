@@ -1,0 +1,16 @@
+
+.listnav{
+    background-color: rgba(54, 54, 21, 0.426);
+    
+}
+.listnav ul{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    color: rgba(0, 0, 255, 0.504);
+    font-size: large;
+
+}
+.listnav ul  :hover{
+    border-bottom: 2px solid red;
+}
