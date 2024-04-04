@@ -4,7 +4,7 @@ import './Newadduser.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import checkToken from './CheckToken';
-import BASE_URL from './Base_url';
+import BASE_URL from './Baseurl';
 // import { validateEmail, validatePassword, validatePhoneNumber, validateAddress, validatePincode } from './ValidationRules';
 function Adduser() {
   const [name, setName] = useState('');

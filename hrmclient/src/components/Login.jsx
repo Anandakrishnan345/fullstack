@@ -8,7 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import { validateEmail, validatePassword } from './ValidationRules';
-import BASE_URL from './Base_url';
+import BASE_URL from './Baseurl';
 
 
 
