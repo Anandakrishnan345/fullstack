@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useParams,Link } from 'react-router-dom';
 import './User.css';
 import Logout from './Logout';
+import BASE_URL from './Baseurl';
 
 function User() {
     const [user, setUser] = useState(null);
@@ -14,7 +15,7 @@ function User() {
             try {
                 console.log("id",id)
                 const token = localStorage.getItem('token');
-                const response = await axios.get(`http://localhost:3000/viewuser/${id}`, {
+                const response = await axios.get(`${BASE_URL}:3000/viewuser/${id}`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

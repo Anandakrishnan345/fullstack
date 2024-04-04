@@ -1,7 +1,8 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Forgotpassword.css'
+import './Forgotpassword.css';
+import BASE_URL from './Baseurl';
 
 function ForgotPassword() {
   const [email, setEmail] = useState('');
@@ -9,7 +10,7 @@ function ForgotPassword() {
 
   const handleForgotPassword = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/forgot-password', { email });
+      const response = await axios.post(`${BASE_URL}:3000/forgot-password`, { email });
       setMessage(response.data.message); 
       if (response.data.message === "Email sent successfully") {
         // Show an alert if the email is sent successfully

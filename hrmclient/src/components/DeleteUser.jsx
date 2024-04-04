@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import BASE_URL from "./Baseurl";
 
 function DeleteUser() {
   const [data, setData] = useState({});
@@ -12,7 +13,7 @@ function DeleteUser() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/viewuser/${id}`
+          `${BASE_URL}:3000/viewuser/${id}`
         );
         setData(response.data.data);
       } catch (error) {
@@ -24,7 +25,7 @@ function DeleteUser() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3000/delete/${id}`);
+      await axios.delete(`${BASE_URL}:3000/delete/${id}`);
       setData({}); // Update local state to empty object after successful deletion
       Swal.fire({
         icon: "success",

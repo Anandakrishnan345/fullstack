@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Resetpassword.css';
 import { useNavigate } from 'react-router-dom';
+import BASE_URL from './Baseurl';
 
 function ResetPassword() {
   const [password, setPassword] = useState('');
@@ -27,7 +28,7 @@ function ResetPassword() {
         return;
       }
 
-      const response = await axios.patch('http://localhost:3000/reset-password', { password }, {
+      const response = await axios.patch(`${BASE_URL}:3000/reset-password`, { password }, {
         headers: {
           Authorization: `Bearer ${token}` // Use the token stored in state
         }

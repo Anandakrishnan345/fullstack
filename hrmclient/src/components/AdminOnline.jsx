@@ -1,21 +1,4 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import Adminimage from"./images/man.png"
-// function AdminOnline(){
-//     return(
-//         <>
-//         <div className="ctn" style={{ margin: "auto", display: "flex",justifyContent:"center",alignItems:"center",flexDirection:"column",gap:"3px" }}>
-//           <img src={Adminimage} alt="" width={80} style={{paddingTop:"10px"}}/>
-//           <h2 style={{marginTop:"-5px"}}>Admin</h2>
-//         <Link to={"/adduser"} ><button>Adduser</button></Link>
-//         <Link to={"/getuser"} ><button>Getuser</button></Link>
-//         </div>
-//         </>
-      
-        
-//     )
-// }
-// export default AdminOnline
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -24,6 +7,7 @@ import Adminimage from './images/man.png';
 import './Adminonline.css';
 import Logout from './Logout';
 import checkToken from './CheckToken';
+import BASE_URL from './Baseurl';
 
 function AdminOnline() {
   const [userId, setUserId] = useState(null);
@@ -46,7 +30,7 @@ function AdminOnline() {
     const fetchUser = async () => {
       try {
         // Fetch user details using user ID
-        const response = await axios.get(`http://localhost:3000/viewuser/${userId}`);
+        const response = await axios.get(`${BASE_URL}:3000/viewuser/${userId}`);
         console.log("response",response)
         setUser(response.data); // Assuming response contains user details
       } catch (error) {
