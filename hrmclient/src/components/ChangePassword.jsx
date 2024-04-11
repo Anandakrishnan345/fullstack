@@ -7,7 +7,7 @@ import axios from 'axios';
 import './Changepassword.css';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import checkToken from './CheckToken';
+// import checkToken from './CheckToken';
 import BASE_URL from './Baseurl';
 
 const ChangePassword = () => {
@@ -16,7 +16,7 @@ const ChangePassword = () => {
   const [newPassword, setNewPassword] = useState('');
   const navigate = useNavigate();
 
- checkToken();
+//  checkToken();
 
   const handleChangePassword = async () => {
     try {
