@@ -2,6 +2,7 @@ const dotenv=require('dotenv');
 dotenv.config();
 const express = require('express');
 const app = express();
+const path = require('path');
 
 const cors = require("cors");
 const authRoutes = require('./Routes/authRoutes');
@@ -34,7 +35,12 @@ app.use(userRoutes);
 console.log("__dirname", __dirname);
 // app.use('/', express.static(__dirname + "/public"));
 
-app.use( express.static(__dirname + "/public"));
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Handle all other routes by serving the index.html
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 // Start the server
 app.listen(process.env.PORT, () => {
   // console.log(`server listening at http://localhost:${process.env.PORT}`);
