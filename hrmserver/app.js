@@ -32,8 +32,9 @@ app.use(userRoutes);
 
 // Serve static files
 console.log("__dirname", __dirname);
-app.use('/', express.static(__dirname + "/public"));
+// app.use('/', express.static(__dirname + "/public"));
 
+app.use( express.static(__dirname + "/public"));
 // Start the server
 app.listen(process.env.PORT, () => {
   // console.log(`server listening at http://localhost:${process.env.PORT}`);
